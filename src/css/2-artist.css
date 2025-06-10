@@ -1,0 +1,10 @@
+/*   Just to be sure system is works - delete before coding    */
+
+.artist-test {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.artist-test h2 {
+  color: teal;
+}
