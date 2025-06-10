@@ -23,7 +23,7 @@ import './js/4-feedbacks.js';
 import './js/5-artist-modal.js';
 import './js/6-footer.js';
 
-import './css/0-Styles.css';
+import './css/0-styles.css';
 
 // import './css/1-header-hero.css';
 // import './css/2-artist.css';
