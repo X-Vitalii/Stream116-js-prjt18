@@ -1,0 +1,72 @@
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0b0b0f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feedback-section {
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .swiper-container {
+    position: relative;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .feedback-rating {
+    margin-bottom: 15px;
+  }
+  
+  .feedback-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-author {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .custom-pagination .dot {
+    width: 8px;
+    height: 8px;
+    background: #777;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .custom-pagination .dot.active {
+    background: #fff;
+  }
+  
