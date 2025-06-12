@@ -1,18 +1,8 @@
-:root {
-    /* Добавляем нужные переменные */
-    --color-dark-bg: #000000;
-    --color-light-text: #ffffff;
-    --color-hover: #9c27b0;
-    /* Пример пурпурного для ховера (как affair) */
-    --color-border: rgba(255, 255, 255, 0.2);
-}
-
 /******** Mobile *******/
+
 .footer-wrapper {
     width: 100%;
     padding: 48px 0 64px;
-    background-color: var(--color-dark-bg) !important;
-    color: var(--color-light-text) !important;
 }
 
 .footer-content {
@@ -31,8 +21,7 @@
 }
 
 .footer-logo-icon {
-    fill: var(--color-light-text) !important;
-    /* Белый цвет для лого */
+    fill: var(--color-affair);
 }
 
 .footer-nav-list {
@@ -44,22 +33,22 @@
 
 .footer-nav-item:not(:last-child) {
     margin-bottom: 32px;
+    /* Вертикальні відступи для мобільної */
 }
 
 .footer-nav-link {
     font-weight: 600;
     font-size: 16px;
-    color: var(--color-light-text) !important;
 }
 
 .footer-nav-link:hover,
 .footer-nav-link:focus {
-    color: var(--color-hover) !important;
+    color: var(--color-affair);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-divider {
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-scheme-1-border);
     width: 100%;
     margin-bottom: 24px;
 }
@@ -76,7 +65,6 @@
     font-size: 16px;
     margin: 0 21px;
     white-space: nowrap;
-    color: var(--color-light-text) !important;
 }
 
 .footer-social {
@@ -94,16 +82,16 @@
 }
 
 .footer-social-icon {
-    fill: var(--color-light-text) !important;
+    fill: var(--color-scheme-1-text);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .footer-social-icon:hover,
-.footer-social-link:focus .footer-social-icon {
+.footer-social-link:focus {
     animation: pulse 1s ease-in-out infinite;
     opacity: 0.9;
-    fill: var(--color-hover) !important;
+    fill: var(--color-affair);
 }
 
 @keyframes pulse {
@@ -121,6 +109,7 @@
 }
 
 /******** Tablet *******/
+
 @media screen and (min-width: 768px) {
     .footer-wrapper {
         padding: 80px 0;
@@ -144,6 +133,7 @@
     .footer-nav-item:not(:last-child) {
         margin-bottom: 0;
         margin-right: 32px;
+
     }
 
     .footer-divider {
@@ -171,8 +161,10 @@
 }
 
 /******** Desktop *******/
+
 @media screen and (min-width: 1440px) {
     .footer-social-icon {
         width: 24px;
         height: 24px;
-    } }
+    }
+}
