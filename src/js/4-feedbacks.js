@@ -15,7 +15,6 @@ async function renderFeedbacks() {
     const feedbacks_all = await fetchFeedbacks();
     const feedbacks = feedbacks_all.data;
 
-    
     feedbacks.forEach(({ rating, descr, name }, index) => {
       const slide = document.createElement('div');
       slide.className = 'swiper-slide';
@@ -31,9 +30,8 @@ async function renderFeedbacks() {
       wrapper.appendChild(slide);
     });
 
-    
     feedbacks.forEach(({ rating }, index) => {
-      $(`#rating-${index}`).raty({
+        $(`#rating-${index}`).raty({
         readOnly: true,
         score: Math.round(rating),
         starType: 'img',
@@ -42,9 +40,7 @@ async function renderFeedbacks() {
       });
     });
 
-
-  initSwiper(feedbacks.length);
-
+    initSwiper(feedbacks.length);
   } catch (error) {
     console.error('Error loading feedbacks:', error);
   }
@@ -63,7 +59,6 @@ function initSwiper(totalSlides) {
       el: '.custom-pagination',
       clickable: true,
       renderBullet: (index, className) => {
-        
         return `<span class="${className} dot" data-custom-index="${index}"></span>`;
       }
     },

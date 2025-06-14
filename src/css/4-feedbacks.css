@@ -1,6 +1,5 @@
-/* === Загальна секція === */
 .feedback-section {
-  background-color: #0d0d0d; 
+  background-color: #0d0d0d;
   padding: 60px 20px;
   color: white;
   text-align: center;
@@ -8,25 +7,21 @@
   overflow: hidden;
 }
 
-/* === Контейнер Swiper === */
+/* Контейнер Swiper */
 .swiper-container {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-}
-
-/* === Слайд === */
-
-.swiper-container {
   overflow: hidden;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-/* === Зірки === */
+/* Картка відгуку */
+.feedback-card {
+  padding: 20px;
+  text-align: center;
+}
 
-
-/* === Текст відгуку === */
+/* Текст */
 .feedback-text {
   font-size: 24px;
   font-weight: 700;
@@ -35,29 +30,34 @@
   margin-bottom: 30px;
 }
 
-/* === Ім’я автора === */
 .feedback-author {
   font-size: 14px;
   color: #c2c2c2;
 }
 
-/* === Стрілки навігації === */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: none !important;
+/* Зірки */
+.feedback-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  background: white;
+.feedback-rating img {
+  width: 20px;
+  height: 20px;
+  filter: hue-rotate(200deg) saturate(400%);
 }
 
-/* === Пагінація (три крапки) === */
+
+
+/* Пагінація */
+
 .custom-pagination {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .custom-pagination .dot {
@@ -73,11 +73,25 @@
 }
 
 
-
-.feedback-rating{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Видаляємо дефолтні стрілки Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
 }
 
-  
+.swiper-button-next{
+    margin-right: 64px;
+}
+.swiper-button-prev{
+    margin-left: 64px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 8px;
+padding-left: 8px;
+padding-right: 8px;
+background: #060307;
+}

@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Feedback Slider</title>
-  <link rel="stylesheet" href="/src/css/4-feedbacks.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.css" />
-</head>
-<body>
-  <section class="feedback-section">
-    <div class="swiper-container">
-      <div class="swiper-wrapper" id="feedback-wrapper"></div>
-    </div>
-     <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    <div class="swiper-pagination custom-pagination"></div>
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feedback Slider</title>
+    <link rel="stylesheet" href="/src/css/4-feedbacks.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.css" />
+  </head>
+  <body>
+    <section class="feedback-section">
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="feedback-wrapper"></div>
+      </div>
+        <!-- Кастомні стрілки зі SVG -->
+        <div class="swiper-button-prev">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.7069 17.6655L8.41394 13.3725H17.9999V11.3725H8.41394L12.7069 7.07953L11.2929 5.66553L4.58594 12.3725L11.2929 19.0795L12.7069 17.6655Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.293 17.6655L12.707 19.0795L19.414 12.3725L12.707 5.66553L11.293 7.07953L15.586 11.3725H6V13.3725H15.586L11.293 17.6655Z" fill="white"/>
+          </svg>
+        </div>
 
- 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.js" defer></script>
-</body>
+        <div class="swiper-pagination custom-pagination"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.js"></script>
+  </body>
 </html>
-
-
