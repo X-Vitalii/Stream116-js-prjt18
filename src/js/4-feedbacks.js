@@ -13,7 +13,7 @@ async function renderFeedbacks() {
 
   try {
     const feedbacks_all = await fetchFeedbacks();
-    const feedbacks = feedbacks_all.data;
+    const feedbacks = feedbacks_all.data.slice(0, 10);
 
     feedbacks.forEach(({ rating, descr, name }, index) => {
       const slide = document.createElement('div');
@@ -73,17 +73,27 @@ function initSwiper(totalSlides) {
   });
 }
 
-function renderThreeDots(activeIndex) {
+function renderThreeDots(activeIndex, totalSlides) {
   const paginationContainer = document.querySelector('.custom-pagination');
-  const dotsCount = 3;
   paginationContainer.innerHTML = '';
 
-  for (let i = 0; i < dotsCount; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    if (i === activeIndex % dotsCount) dot.classList.add('active');
-    paginationContainer.appendChild(dot);
-  }
-}
+ 
+  const firstDot = document.createElement('span');
+  firstDot.className = 'dot';
+  if (activeIndex === 0) firstDot.classList.add('active');
+  paginationContainer.appendChild(firstDot);
 
+ 
+  const middleDot = document.createElement('span');
+  middleDot.className = 'dot';
+  if (activeIndex > 0 && activeIndex < totalSlides - 1) {
+    middleDot.classList.add('active');
+  }
+  paginationContainer.appendChild(middleDot);
+
+  const lastDot = document.createElement('span');
+  lastDot.className = 'dot';
+  if (activeIndex === totalSlides - 1) lastDot.classList.add('active');
+  paginationContainer.appendChild(lastDot);
+}
 renderFeedbacks();

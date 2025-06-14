@@ -17,7 +17,6 @@
 
 /* Картка відгуку */
 .feedback-card {
-  padding: 20px;
   text-align: center;
 }
 
@@ -57,7 +56,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 60px;
+  
 }
 
 .custom-pagination .dot {
@@ -95,3 +94,52 @@ padding-left: 8px;
 padding-right: 8px;
 background: #060307;
 }
+
+
+@media (max-width: 768px) {
+  .swiper-container{
+    max-width: 518px;
+    max-height: none;
+  }
+  .feedback-text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .feedback-rating svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .custom-pagination {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-container {
+    padding: 0 10px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+  display: none !important;
+ }
+ .custom-pagination{
+  margin-top: 20px;
+ }
+
+ .feedback-card {
+  /* padding: 20px 120px; */
+}
+}
+
+
+@media (min-width: 769px){
+  .feedback-card {
+  padding: 20px 120px;
+ } 
+};
