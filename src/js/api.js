@@ -8,6 +8,8 @@ const api = axios.create({
   },
 });
 
+const BASE_URL = 'https://sound-wave.b.goit.study/api';
+
 export async function fetchArtists({ page = 1, limit = 8 } = {}) {
   try {
     const response = await api.get('/artists', {
