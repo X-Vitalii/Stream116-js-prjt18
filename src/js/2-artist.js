@@ -1,4 +1,5 @@
 import { fetchArtists } from './api.js';
+import { openModal } from './5-artist-modal.js';
 
 const ARTISTS_PER_PAGE = 8;
 let currentPage = 1;
@@ -26,7 +27,9 @@ const buildArtistCard = artist => {
   listItem.className = 'artist-card';
 
   const image = document.createElement('img');
-  image.src = artist.strArtistThumb || 'https://placehold.co/150x150/cccccc/333333?text=No+Image';
+  image.src =
+    artist.strArtistThumb ||
+    'https://placehold.co/150x150/cccccc/333333?text=No+Image';
   image.alt = artist.strArtist || 'No Image';
   image.onerror = function () {
     this.src = 'https://placehold.co/150x150/cccccc/333333?text=No+Image';
@@ -58,7 +61,8 @@ const buildArtistCard = artist => {
   const bioElement = document.createElement('p');
   bioElement.className = 'artist-description';
   const biography = artist.strBiographyEN || 'No short info available.';
-  bioElement.textContent = biography.length > 200 ? biography.slice(0, 200) + '...' : biography;
+  bioElement.textContent =
+    biography.length > 200 ? biography.slice(0, 200) + '...' : biography;
   listItem.appendChild(bioElement);
 
   const actionButton = document.createElement('button');
@@ -85,7 +89,10 @@ const buildArtistCard = artist => {
 const loadMoreArtists = async () => {
   showSpinner();
   try {
-    const response = await fetchArtists({ page: currentPage, limit: ARTISTS_PER_PAGE });
+    const response = await fetchArtists({
+      page: currentPage,
+      limit: ARTISTS_PER_PAGE,
+    });
     const artists = Array.isArray(response?.artists) ? response.artists : [];
 
     if (!artists.length) {
@@ -126,6 +133,7 @@ const initializeArtistModule = () => {
     if (targetBtn) {
       const artistId = targetBtn.dataset.artistId;
       console.log(`Artist clicked: ${artistId}`);
+      openModal(artistId);
     }
   });
 
