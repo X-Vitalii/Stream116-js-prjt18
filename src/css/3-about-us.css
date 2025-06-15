@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #060307;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px; /* Padding para que no pegue a bordes */
+}
+
+.about-us {
+  background-color: #060307;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 64px 0;
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 48px;
+}
+
+.image-container {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 288px;
+  height: 168px;
+}
+.team-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 270px;
+  padding: 0 20px;
+}
+
+.about-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+.about-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Media Queries para tablets */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .about-us {
+    display: flex;
+    max-width: 768px;
+    padding: 64px 0;
+    gap: 24px;
+  }
+
+  .image-container {
+    width: 704px;
+    height: 413px;
+  }
+
+  .about-desc {
+    max-width: 610px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .image-container {
+    width: 640px;
+    height: 664px;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 112px 64px;
+    align-items: center;
+    max-width: 1440px;
+  }
+  .about-desc {
+    display: flex;
+    gap: 24px;
+    min-width: 630px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+  .about-title {
+    font-size: 60px;
+  }
+}
