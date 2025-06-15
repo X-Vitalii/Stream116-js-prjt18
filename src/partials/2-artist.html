@@ -1,0 +1,31 @@
+<section class="artists-section">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="icon-down-arrow-alt" viewBox="0 0 32 32">
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M24.943 16.943l-1.885-1.885-5.724 5.724v-12.781h-2.667v12.781l-5.724-5.724-1.885 1.885 8.943 8.943 8.943-8.943z"
+      ></path>
+    </symbol>
+
+    <symbol id="icon-caret-right" viewBox="0 0 32 32">
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M12 25.333l10.667-9.333-10.667-9.333v18.667z"
+      ></path>
+    </symbol>
+  </svg>
+  <div class="container">
+    <h2 class="artists-header">artists</h2>
+    <h3 class="artists-slogan">Explore Your New Favorite Artists</h3>
+    <ul class="artists-list" id="artists"></ul>
+    <span id="loader" class="loader hidden">Loading</span>
+    <button class="explore-btn load-more" id="loadMoreBtn">
+      Load More
+      <svg class="load-more-icon" width="24" height="24">
+        <use href="#icon-down-arrow-alt"></use>
+      </svg>
+    </button>
+  </div>
+</section>
