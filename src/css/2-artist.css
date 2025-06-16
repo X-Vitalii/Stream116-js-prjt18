@@ -4,7 +4,7 @@
   margin: 24px auto;
   letter-spacing: 2px;
   position: relative;
-  color: #FFF;
+  color: #fff;
   box-sizing: border-box;
   text-align: center;
   animation: animloader 1s ease-in infinite alternate;
@@ -15,7 +15,6 @@
     filter: blur(0px);
     transform: skew(0deg);
   }
-
   100% {
     filter: blur(3px);
     transform: skew(-4deg);
@@ -70,7 +69,6 @@
   border-radius: 16px;
   margin-bottom: 24px;
 }
-
 .artist-genres-list {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +126,6 @@
 .learn-more-btn:hover {
   background-color: #060307;
 }
-
 .learn-more-btn:active {
   background-color: #fff;
 }
@@ -183,7 +180,6 @@
     width: 704px;
     gap: 32px;
   }
-
   .artist-card {
     max-width: 704px;
   }
@@ -209,17 +205,14 @@
     max-width: 530px;
     margin-bottom: 80px;
   }
-
   .artists-list {
     gap: 32px;
     flex-wrap: wrap;
     width: 1312px;
   }
-
   .artist-card {
     max-width: 640px;
   }
-
   .artist-card img {
     min-width: 640px;
     width: 100%;
