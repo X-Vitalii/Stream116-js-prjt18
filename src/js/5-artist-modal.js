@@ -208,7 +208,7 @@ function renderModalContent(data) {
   closeBtn.type = 'button';
   closeBtn.innerHTML = `
     <svg class="icon" width="24" height="24">
-      <use href="./img/icons.svg#icon-close"></use>
+      <use href="${spritePath}#icon-close"></use>
     </svg>
   `;
   /*----------------------------------*/
