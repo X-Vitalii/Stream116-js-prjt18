@@ -25,9 +25,9 @@
     <title>ArtistsHub</title>
 
     <script type="module" crossorigin src="/Stream116-js-prjt18/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/Stream116-js-prjt18/assets/vendor-BEnbeQyM.js">
-    <link rel="stylesheet" crossorigin href="/Stream116-js-prjt18/assets/vendor-H4JKprY1.css">
-    <link rel="stylesheet" crossorigin href="/Stream116-js-prjt18/assets/index-Bl3yw4pO.css">
+    <link rel="modulepreload" crossorigin href="/Stream116-js-prjt18/assets/vendor-CSZE2PVx.js">
+    <link rel="stylesheet" crossorigin href="/Stream116-js-prjt18/assets/vendor-BbPxggS7.css">
+    <link rel="stylesheet" crossorigin href="/Stream116-js-prjt18/assets/index-BItZxc2G.css">
   </head>
   <body>
     <header class="page-header">
@@ -149,37 +149,86 @@
   </div>
 </section>
 
-      <section id="about-us" class="section about-us">
-  <div class="container about-container">
-    <div class="image-container">
-      <picture>
-        <source
-          srcset="../images/team.webp 1x, ../images/team@2x.webp 2x"
-          type="image/webp"
-        />
-        <source
-          srcset="../images/team.jpg 1x, ../images/team@2x.jpg 2x"
-          type="image/jpeg"
-        />
-        <img src="../images/team.jpg" class="team-img" alt="Our team" />
-      </picture>
-    </div>
-  </div>
-  <div class="about-desc">
-    <svg class="logo-icon" width="64" height="64">
-      <use href="../images/symbol-defs.svg#icon-logo-icon-1"></use>
-    </svg>
+      <section class="about" id="about-us">
+  <div class="container">
+    <picture class="img-wrapper">
+      <source
+        media="(min-width:1440px)"
+        srcset="/Stream116-js-prjt18/assets/team-desk-BI19oMGO.jpg 1x, /Stream116-js-prjt18/assets/team@2x-desk-Dc77wVRn.jpg 2x"
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="/Stream116-js-prjt18/assets/team-tab-BBfOVhqB.jpg 1x, /Stream116-js-prjt18/assets/team@2x-tab-CXOysH1c.jpg 2x"
+      />
+      <source
+        media="(max-width:767px)"
+        srcset="/Stream116-js-prjt18/assets/team-mob-MclWN3S1.jpg 1x, /Stream116-js-prjt18/assets/team@2x-mob-D-XggjZS.jpg 2x"
+      />
+      <img class="img-team" src="/Stream116-js-prjt18/assets/team-desk-BI19oMGO.jpg" alt="team" />
+    </picture>
 
-    <h1 class="about-title">About ArtistsHub</h1>
-    <p class="about-text">
-      At ArtistsHub, our mission is to connect music lovers with the artists
-      they adore. We strive to create a vibrant community where discovering new
-      music is as enjoyable as listening to it.
-    </p>
+    <div class="text-content">
+      <svg class="logo-icon" width="64" height="64">
+        <use href="/Stream116-js-prjt18/assets/icons-DUpbwh8u.svg#icon-logo-icon"></use>
+      </svg>
+
+      <h2 class="about-title">About ArtistsHub</h2>
+
+      <p class="about-text">
+        At ArtistsHub, our mission is to connect music lovers with the artists
+        they adore. We strive to create a vibrant community where discovering
+        new music is as enjoyable as listening to it.
+      </p>
+    </div>
   </div>
 </section>
 
-      
+      <section class="feedback-section" id="reviews">
+  <div class="container">
+    <h2 class="feedback-section-title">Відгуки</h2>
+    <div class="swiper feedback-swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="feedback-pagination">
+        <svg
+          width="1312"
+          height="29"
+          viewBox="0 0 1312 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        ></svg>
+      </div>
+      <div class="swiper-button-prev">
+        <svg
+          class="swiper-icon"
+          width="48"
+          height="48"
+          viewBox="0 0 14 15"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.70694 12.6655L4.41394 8.37253H13.9999V6.37253H4.41394L8.70694 2.07953L7.29294 0.665527L0.585938 7.37253L7.29294 14.0795L8.70694 12.6655Z"
+          />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg
+          class="swiper-icon"
+          width="48"
+          height="48"
+          viewBox="0 0 14 15"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.293 12.6655L6.707 14.0795L13.414 7.37253L6.707 0.665527L5.293 2.07953L9.586 6.37253H0V8.37253H9.586L5.293 12.6655Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
       <div class="artist-modal-backdrop visually-hidden">
   <div class="artist-modal-window" role="dialog" aria-modal="true">
     <button
@@ -196,66 +245,103 @@
 
     </main>
     <footer class="footer-wrapper">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="#" aria-label="Go to homepage" class="footer-logo-link">
-                    <svg class="footer-logo-icon" width="116" height="51" role="img" aria-label="ArtistsHub logo">
-                        <use href="/Stream116-js-prjt18/assets/sprite-B0Ac4nS7.svg#icon-logo"></use>
-                    </svg>
-                </a>
-            </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="#" aria-label="Go to homepage" class="footer-logo-link">
+          <svg
+            class="footer-logo-icon"
+            width="116"
+            height="51"
+            role="img"
+            aria-label="ArtistsHub logo"
+          >
+            <use href="/Stream116-js-prjt18/assets/icons-DUpbwh8u.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
 
-            <nav class="footer-nav" aria-label="Footer navigation">
-                <ul class="footer-nav-list">
-                    <li class="footer-nav-item">
-                        <a href="#artists" aria-label="Go to Artists section" class="footer-nav-link">Artists</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="#about-us" aria-label="Go to About Us section" class="footer-nav-link">About us</a>
-                    </li>
-                    <li class="footer-nav-item">
-                        <a href="#reviews" aria-label="Go to Reviews section" class="footer-nav-link">Reviews</a>
-                    </li>
-                </ul>
-            </nav>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <a
+              href="#artists"
+              aria-label="Go to Artists section"
+              class="footer-nav-link"
+              >Artists</a
+            >
+          </li>
+          <li class="footer-nav-item">
+            <a
+              href="#about-us"
+              aria-label="Go to About Us section"
+              class="footer-nav-link"
+              >About us</a
+            >
+          </li>
+          <li class="footer-nav-item">
+            <a
+              href="#reviews"
+              aria-label="Go to Reviews section"
+              class="footer-nav-link"
+              >Reviews</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-            <div class="footer-divider"></div>
+      <div class="footer-divider"></div>
 
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 ArtistsHub. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 ArtistsHub. All rights reserved.</p>
 
-                <div class="footer-social">
-                    <ul class="footer-social-list">
-                        <li class="footer-social-item">
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Visit our Instagram profile" class="footer-social-link">
-                                <svg class="footer-social-icon" width="40" height="40">
-                                    <use href="/Stream116-js-prjt18/assets/sprite-B0Ac4nS7.svg#icon-Instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social-item">
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Visit our Facebook page" class="footer-social-link">
-                                <svg class="footer-social-icon" width="40" height="40">
-                                    <use href="/Stream116-js-prjt18/assets/sprite-B0Ac4nS7.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social-item">
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Visit our YouTube channel" class="footer-social-link">
-                                <svg class="footer-social-icon" width="40" height="40">
-                                    <use href="/Stream116-js-prjt18/assets/sprite-B0Ac4nS7.svg#icon-youtube"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="footer-social">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram profile"
+                class="footer-social-link"
+              >
+                <svg class="footer-social-icon" width="40" height="40">
+                  <use href="/Stream116-js-prjt18/assets/icons-DUpbwh8u.svg#icon-Instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
+                class="footer-social-link"
+              >
+                <svg class="footer-social-icon" width="40" height="40">
+                  <use href="/Stream116-js-prjt18/assets/icons-DUpbwh8u.svg#icon-Facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our YouTube channel"
+                class="footer-social-link"
+              >
+                <svg class="footer-social-icon" width="40" height="40">
+                  <use href="/Stream116-js-prjt18/assets/icons-DUpbwh8u.svg#icon-Youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-    </footer>
+  </div>
+</footer>
+
   </body>
 </html>
