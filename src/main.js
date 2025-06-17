@@ -21,7 +21,6 @@ import './js/2-artist.js';
 import './js/3-about-us.js';
 import './js/4-feedbacks.js';
 import './js/5-artist-modal.js';
-import './js/6-footer.js';
 
 import './css/0-styles.css';
 

@@ -132,7 +132,7 @@ const initializeArtistModule = () => {
     const targetBtn = e.target.closest('.learn-more-btn');
     if (targetBtn) {
       const artistId = targetBtn.dataset.artistId;
-      console.log(`Artist clicked: ${artistId}`);
+      // console.log(`Artist clicked: ${artistId}`);
       openModal(artistId);
     }
   });
