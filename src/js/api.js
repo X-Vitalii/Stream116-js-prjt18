@@ -50,3 +50,22 @@ export async function getAlbumById(albumId) {
     throw error;
   }
 }
+
+export async function fetchData(url, options = {}) {
+  try {
+    const response = await axios.get(url, {
+      headers: {
+        accept: 'application/json',
+        ...options.headers,
+      },
+      ...options,
+    });
+
+    if (!response.data) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
